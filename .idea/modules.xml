@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/HelpCoin.iml" filepath="$PROJECT_DIR$/.idea/modules/HelpCoin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/HelpCoin_main.iml" filepath="$PROJECT_DIR$/.idea/modules/HelpCoin_main.iml" group="HelpCoin" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/HelpCoin_test.iml" filepath="$PROJECT_DIR$/.idea/modules/HelpCoin_test.iml" group="HelpCoin" />
+    </modules>
+  </component>
+</project>
