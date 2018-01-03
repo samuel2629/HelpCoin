@@ -37,7 +37,6 @@ public class UserController {
         userService.save(user);
     }
 
-
     private User createUser(String firstName, String lastName, String email, long phoneNumber) {
         User user = new User();
         user.setFirstName(firstName);
