@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import static com.silho.helpcoin.constants.ConstantsUser.*;
 
 @Controller
-@SpringBootApplication
 public class UserController {
 
     @Autowired
