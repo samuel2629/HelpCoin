@@ -3,6 +3,7 @@ package com.silho.helpcoin.controller;
 import com.silho.helpcoin.model.User;
 import com.silho.helpcoin.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import static com.silho.helpcoin.constants.ConstantsUser.*;
 
 @Controller
+@SpringBootApplication
 public class UserController {
 
     @Autowired
