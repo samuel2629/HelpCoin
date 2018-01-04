@@ -22,7 +22,7 @@ public class UserController {
     public String home(){
         UserHelpCoin userHelpCoin = createUser((int) System.currentTimeMillis(),"alex", "zaffran", "samuel2629@gmail.com", 7699954);
         userService.save(userHelpCoin);
-        return "index";
+        return userHelpCoin.getFirstName() + " " + userHelpCoin.getLastName();
     }
 
     @RequestMapping(value = "/addUser", method = RequestMethod.POST)
