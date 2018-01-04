@@ -20,7 +20,7 @@ public class UserController {
     @ResponseBody
     @RequestMapping(value = "/")
     public String home(){
-        UserHelpCoin userHelpCoin = createUser(137,"samuel", "zaffran", "samuel2629@gmail.com", 7699954);
+        UserHelpCoin userHelpCoin = createUser((int) System.currentTimeMillis(),"alex", "zaffran", "samuel2629@gmail.com", 7699954);
         userService.save(userHelpCoin);
         return "index";
     }
@@ -35,7 +35,7 @@ public class UserController {
     }
 
     private void responseAddUser(String firstName, String lastName, String email, long phoneNumber) {
-        UserHelpCoin userHelpCoin = createUser(137, firstName, lastName, email, phoneNumber);
+        UserHelpCoin userHelpCoin = createUser((int) System.currentTimeMillis(), firstName, lastName, email, phoneNumber);
         userService.save(userHelpCoin);
     }
 
