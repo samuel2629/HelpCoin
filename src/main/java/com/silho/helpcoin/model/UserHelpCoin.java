@@ -7,7 +7,6 @@ import javax.persistence.*;
 public class UserHelpCoin {
 
     @Id
-    @GeneratedValue
     private int id;
 
     private String firstName;
