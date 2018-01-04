@@ -3,7 +3,7 @@ package com.silho.helpcoin.model;
 
 import javax.persistence.*;
 
-@Table(name = "UsersHelpCoin")
+@Table(name = "usershelpcoin")
 @Entity
 public class UserHelpCoin {
 
