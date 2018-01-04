@@ -10,10 +10,6 @@ import org.springframework.core.env.Environment;
 @Configuration
 @PropertySource("app.properties")
 public class AppConfig {
-
-    @Autowired
-    private Environment env;
-
     @Bean
     public Hashids hashids(){
         return new Hashids(env.getProperty("helpcoin.hash.salt"),8);
