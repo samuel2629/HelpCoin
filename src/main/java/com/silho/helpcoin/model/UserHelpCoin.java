@@ -3,24 +3,19 @@ package com.silho.helpcoin.model;
 
 import javax.persistence.*;
 
-@Table(name = "usershelpcoin")
 @Entity
 public class UserHelpCoin {
 
     @Id
-    //@GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue
     private int id;
 
-    @Column(name = "firstname")
     private String firstName;
 
-    @Column(name = "lastname")
     private String lastName;
 
-    @Column(name = "email")
     private String email;
 
-    @Column(name = "phone")
     private Long phone;
 
     public UserHelpCoin(){}
