@@ -1,9 +1,10 @@
 package com.silho.helpcoin.dao;
 
-import com.silho.helpcoin.model.User;
+import com.silho.helpcoin.model.UserHelpCoin;
+
 
 public interface UserDao {
-    User findById(Long id);
-    void save(User user);
-    void delete(User user);
+    UserHelpCoin findById(Long id);
+    void save(UserHelpCoin userHelpCoin);
+    void delete(UserHelpCoin userHelpCoin);
 }

@@ -1,21 +1,29 @@
 package com.silho.helpcoin.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 
+import javax.persistence.*;
+
+@Table(name = "UsersHelpCoin")
 @Entity
-public class User{
+public class UserHelpCoin {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    //@GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
 
-    private String firstName, lastName, email;
+    @Column(name = "firstname")
+    private String firstName;
+
+    @Column(name = "lastname")
+    private String lastName;
+
+    @Column(name = "email")
+    private String email;
+
+    @Column(name = "phone")
     private Long phone;
 
-    public User(){}
+    public UserHelpCoin(){}
 
     public int getId() {
         return id;

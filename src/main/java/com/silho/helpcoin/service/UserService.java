@@ -1,9 +1,9 @@
 package com.silho.helpcoin.service;
 
-import com.silho.helpcoin.model.User;
+import com.silho.helpcoin.model.UserHelpCoin;
 
 public interface UserService {
-    User findById(Long id);
-    void save(User user);
-    void delete(User user);
+    UserHelpCoin findById(Long id);
+    void save(UserHelpCoin userHelpCoin);
+    void delete(UserHelpCoin userHelpCoin);
 }

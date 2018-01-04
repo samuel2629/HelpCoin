@@ -1,7 +1,7 @@
 package com.silho.helpcoin.service;
 
 import com.silho.helpcoin.dao.UserDao;
-import com.silho.helpcoin.model.User;
+import com.silho.helpcoin.model.UserHelpCoin;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,17 +12,17 @@ public class UserServiceImpl implements UserService {
     private UserDao userDao;
 
     @Override
-    public User findById(Long id) {
+    public UserHelpCoin findById(Long id) {
         return null;
     }
 
     @Override
-    public void save(User user) {
-        userDao.save(user);
+    public void save(UserHelpCoin userHelpCoin) {
+        userDao.save(userHelpCoin);
     }
 
     @Override
-    public void delete(User user) {
+    public void delete(UserHelpCoin userHelpCoin) {
 
     }
 }

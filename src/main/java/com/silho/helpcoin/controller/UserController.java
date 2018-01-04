@@ -1,9 +1,8 @@
 package com.silho.helpcoin.controller;
 
-import com.silho.helpcoin.model.User;
+import com.silho.helpcoin.model.UserHelpCoin;
 import com.silho.helpcoin.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -21,6 +20,8 @@ public class UserController {
     @ResponseBody
     @RequestMapping(value = "/")
     public String home(){
+        UserHelpCoin userHelpCoin = createUser(137,"samuel", "zaffran", "samuel2629@gmail.com", 7699954);
+        userService.save(userHelpCoin);
         return "index";
     }
 
@@ -30,21 +31,22 @@ public class UserController {
                                  @RequestParam(EMAIL) String email,
                                  @RequestParam(PHONE) long phoneNumber){
         responseAddUser(firstName, lastName, email, phoneNumber);
-        return "Adding User";
+        return "Adding UserHelpCoin";
     }
 
     private void responseAddUser(String firstName, String lastName, String email, long phoneNumber) {
-        User user = createUser(firstName, lastName, email, phoneNumber);
-        userService.save(user);
+        UserHelpCoin userHelpCoin = createUser(137, firstName, lastName, email, phoneNumber);
+        userService.save(userHelpCoin);
     }
 
-    private User createUser(String firstName, String lastName, String email, long phoneNumber) {
-        User user = new User();
-        user.setFirstName(firstName);
-        user.setLastName(lastName);
-        user.setEmail(email);
-        user.setPhone(phoneNumber);
-        return user;
+    private UserHelpCoin createUser(int i, String firstName, String lastName, String email, long phoneNumber) {
+        UserHelpCoin userHelpCoin = new UserHelpCoin();
+        userHelpCoin.setFirstName(firstName);
+        userHelpCoin.setLastName(lastName);
+        userHelpCoin.setEmail(email);
+        userHelpCoin.setPhone(phoneNumber);
+        userHelpCoin.setId(i);
+        return userHelpCoin;
     }
 
 }
