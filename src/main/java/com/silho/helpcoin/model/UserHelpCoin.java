@@ -4,6 +4,7 @@ package com.silho.helpcoin.model;
 import javax.persistence.*;
 
 @Entity
+@Table(name = "userhelpcoin")
 public class UserHelpCoin {
 
     @Id
