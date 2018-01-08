@@ -20,9 +20,9 @@ public class UserController {
     @ResponseBody
     @RequestMapping(value = "/")
     public String home(){
-        UserHelpCoin userHelpCoin = createUser((int) System.currentTimeMillis(),"samuel", "zaffran", "samuel2629@gmail.com", 7699954);
+        UserHelpCoin userHelpCoin = createUser((int) System.currentTimeMillis(),"John", "zaffran", "samuel2629@gmail.com", 7699954);
         userService.save(userHelpCoin);
-        return userService.findAllUserHelpCoin().toString();
+        return userService.findAllUserHelpCoin().get(0).getFirstName();
     }
 
     @RequestMapping(value = "/addUser", method = RequestMethod.POST)
